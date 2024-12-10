@@ -35,10 +35,6 @@
     padding: 1.25rem;
   } 
 
-
-
-  <style>
-
     .card {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       max-width: 300px;
@@ -72,7 +68,14 @@
       opacity: 0.7;
     }
   
-  
+  .bc{
+
+    background:#FC5130;
+    
+  }
+
+
+
 
   
   </style>
@@ -130,7 +133,7 @@
                 {% for product in products %}
         
                 <div class="card pt-2 ">
-                 <div> <a href=""><img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
+                 <div> <a href="{{ product.get_absolute_url }}"><img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
         
                   </div>
                   <div>
@@ -296,84 +299,59 @@
 
 
           <section  id="register" style="background: url('images/background-img.png') no-repeat;">
-            <div class="container-fluid n ">
-              <div class="row my-5 py-5">
-                <div class="offset-md-3 col-md-6 my-5 ">
-                  <h2 class="display-3 fw-normal text-center">Get 20% Off on <span class="text-primary">first Purchase</span>
-                  </h2>
-                  <form>
-                    <div class="mb-3">
-                      <input type="email" class="form-control form-control-lg" name="email" id="email"
-                        placeholder="Enter Your Email Address">
-                    </div>
-                    <div class="mb-3">
-                      <input type="password" class="form-control form-control-lg" name="email" id="password1"
-                        placeholder="Create Password">
-                    </div>
-                    <div class="mb-3">
-                      <input type="password" class="form-control form-control-lg" name="email" id="password2"
-                        placeholder="Repeat Password">
-                    </div>
-        
-                    <div class="d-grid gap-2">
-                      <button type="submit" class="btn btn-dark btn-lg rounded-1">Register it now</button>
-                    </div>
-                  </form>
+            <div class="container px-4 py-5">
+              <h2 class="pb-2 border-bottom">Features with title</h2>
+          
+              <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <div class="col d-flex flex-column align-items-start gap-2">
+                  <h2 class="fw-bold text-body-emphasis">Left-aligned title explaining these awesome features</h2>
+                  <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                  <a href="#" class="bc btn btn-secondary btn-lg">Primary button</a>
                 </div>
-              </div>
-            </div>
-          </section>
-
-
-
-          <section id="service">
-            <div class="container py-5 my-5">
-              <div class="row g-md-5 pt-4">
-                <div class="col-md-3  my-3">
-                  <div class="card ">
-                    <div class="mx-auto">
-                      <iconify-icon class="service-icon text-primary " icon="la:shopping-cart"></iconify-icon>
+          
+                <div class="col">
+                  <div class="row row-cols-1 row-cols-sm-2 g-4">
+                    <div class="col d-flex flex-column gap-2">
+                      <div class="bc feature-icon-small d-inline-flex align-items-center justify-content-center  bg-gradient fs-4 rounded-3">
+                        <svg class=" bi" width="1em" height="1em">
+                          <use xlink:href="#collection" />
+                        </svg>
+                      </div>
+                      <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
+                      <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
                     </div>
-                    <h3 class="card-title py-2 m-0">Free Delivery</h3>
-                    <div class="card-text">
-                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+          
+                    <div class="col d-flex flex-column gap-2">
+                      <div class=" bc feature-icon-small d-inline-flex align-items-center justify-content-center  bg-gradient fs-4 rounded-3">
+                        <svg class="bi" width="1em" height="1em">
+                          <use xlink:href="#gear-fill" />
+                        </svg>
+                      </div>
+                      <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
+                      <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+          
+                    <div class="col d-flex flex-column gap-2">
+                      <div class="bc feature-icon-small d-inline-flex align-items-center justify-content-center  bg-gradient fs-4 rounded-3">
+                        <svg class="bi" width="1em" height="1em">
+                          <use xlink:href="#speedometer" />
+                        </svg>
+                      </div>
+                      <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
+                      <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
+                    </div>
+          
+                    <div class="col d-flex flex-column gap-2">
+                      <div class=" bc feature-icon-small d-inline-flex align-items-center justify-content-center  bg-gradient fs-4 rounded-3">
+                        <svg class="bi" width="1em" height="1em">
+                          <use xlink:href="#table" />
+                        </svg>
+                      </div>
+                      <h4 class="fw-semibold mb-0 text-body-emphasis">Featured title</h4>
+                      <p class=" text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 my-3">
-                  <div class="card">
-                    <div class="mx-auto">
-                      <iconify-icon class="service-icon text-primary" icon="la:user-check"></iconify-icon>
-                    </div>
-                    <h3 class="card-title py-2 m-0">100% secure payment</h3>
-                    <div class="card-text">
-                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 my-3">
-                  <div class="card">
-                    <div class="mx-auto">
-                      <iconify-icon class="service-icon text-primary" icon="la:tag"></iconify-icon>
-                    </div>
-                    <h3 class="card-title py-2 m-0">Daily Offer</h3>
-                    <div class="card-text">
-                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 my-3">
-                  <div class="card">
-                    <div class="mx-auto">
-                      <iconify-icon class="service-icon text-primary" icon="la:award"></iconify-icon>
-                    </div>
-                    <h3 class="card-title py-2 m-0">Quality guarantee</h3>
-                    <div class="card-text">
-                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-                    </div>
-                  </div>
-                </div>
-        
               </div>
             </div>
           </section>

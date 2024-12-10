@@ -6,4 +6,4 @@ def index(request):
 
     products = Product.products.all()
 
-    return  render(request,'core/index.html',{'products': products[:4]})
+    return  render(request,'core/index.html',{'products': products[2:]})
