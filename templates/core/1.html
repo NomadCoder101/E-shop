@@ -1,0 +1,501 @@
+{% extends "../base/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+
+
+
+{% block content %}
+
+<style>
+
+  /* category style */
+iconify-icon.category-icon {
+  color: #DEAD6F99;
+  font-size: 100px;
+  transition: all 0.3s ease-in;
+
+}
+
+a.categories-item:hover iconify-icon.category-icon {
+  color: #DEAD6F;
+}
+
+
+/* pet clothing */
+.card {
+  --bs-card-inner-border-radius: none;
+  --bs-card-bg: transparent;
+  background-color: transparent;
+  border: none;
+}
+
+a.btn-cart {
+  border-radius: 0.25rem;
+  border: 1px solid rgba(65, 64, 62, 0.20);
+}
+
+a.btn-wishlist {
+
+  border-radius: 0.25rem;
+  border: 1px solid rgba(65, 64, 62, 0.20);
+}
+
+/* services style  */
+.service-icon {
+  font-size: 30px;
+  border-radius: 3.125rem;
+  border: 1px solid #D9D9D8;
+  padding: 1.25rem;
+}
+
+</style>
+
+
+
+<main>
+
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'img/banner-img.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Responsive left-aligned hero with image</h1>
+            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--header end-->
+
+      <section id="categories">
+        <div class="container my-3 py-5">
+          <div class="row my-5">
+            <div class="col text-center">
+              <a href="#" class="categories-item">
+                <iconify-icon class="category-icon" icon="ph:bowl-food"></iconify-icon>
+                <h5>Foodies</h5>
+              </a>
+            </div>
+            <div class="col text-center">
+              <a href="#" class="categories-item">
+                <iconify-icon class="category-icon" icon="ph:bird"></iconify-icon>
+                <h5>Bird Shop</h5>
+              </a>
+            </div>
+            <div class="col text-center">
+              <a href="#" class="categories-item">
+                <iconify-icon class="category-icon" icon="ph:dog"></iconify-icon>
+                <h5>Dog Shop</h5>
+              </a>
+            </div>
+            <div class="col text-center">
+              <a href="#" class="categories-item">
+                <iconify-icon class="category-icon" icon="ph:fish"></iconify-icon>
+                <h5>Fish Shop</h5>
+              </a>
+            </div>
+            <div class="col text-center">
+              <a href="#" class="categories-item">
+                <iconify-icon class="category-icon" icon="ph:cat"></iconify-icon>
+                <h5>Cat Shop</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clothing" class="my-5 overflow-hidden">
+        <div class="container pb-5">
+    
+          <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Pet Clothing</h2>
+            <div>
+              <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                shop now
+                <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                  <use xlink:href="#arrow-right"></use>
+                </svg></a>
+            </div>
+          </div>
+
+          <div class="album py-5 bg-body-tertiary">
+            <div class="container">
+        
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                    <img src="{% static 'img/item1.jpg' %}" class="card-img-top" alt="...">
+                    
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-body-secondary">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                    <img src="{% static 'img/item2.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-body-secondary">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                    <img src="{% static 'img/item3.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-body-secondary">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                    <img src="{% static 'img/item4.jpg' %}" class="card-img-top" alt="...">
+                    
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-body-secondary">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </section>
+
+
+        <section id="foodies" class="my-5">
+          <div class="container my-5 py-5">
+      
+            <div class="section-header d-md-flex justify-content-between align-items-center">
+              <h2 class="display-3 fw-normal">Pet Foodies</h2>
+              <div class="mb-4 mb-md-0">
+                <p class="m-0">
+                  <button class="filter-button me-4  active" data-filter="*">ALL</button>
+                  <button class="filter-button me-4 " data-filter=".cat">CAT</button>
+                  <button class="filter-button me-4 " data-filter=".dog">DOG</button>
+                  <button class="filter-button me-4 " data-filter=".bird">BIRD</button>
+                </p>
+              </div>
+              <div>
+                <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                  shop now
+                  <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+
+            <div class="album py-5 bg-body-tertiary">
+              <div class="container">
+          
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                      <img src="{% static 'img/item10.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-body-secondary">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                      <img src="{% static 'img/item11.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-body-secondary">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                      <img src="{% static 'img/item12.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-body-secondary">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                      <img src="{% static 'img/item14.jpg' %}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                          </div>
+                          <small class="text-body-secondary">9 mins</small>
+                        </div>
+                      </div>
+                    </div>
+         
+
+          </section>
+
+         
+
+
+          <section id="banner-2" class="my-3" style="background: #F9F3EC;">
+            <div class="container">
+              <div class="row flex-row-reverse banner-content align-items-center">
+                <div class="img-wrapper col-12 col-md-6">
+                  <img src="{% static 'img/banner-img2.png' %}" class="img-fluid">
+                </div>
+                <div class="content-wrapper col-12 offset-md-1 col-md-5 p-5">
+                  <div class="secondary-font text-primary text-uppercase mb-3 fs-4">Upto 40% off</div>
+                  <h2 class="banner-title display-1 fw-normal">Clearance sale !!!
+                  </h2>
+                  <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    shop now
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg></a>
+                </div>
+        
+              </div>
+            </div>
+          </section>
+
+
+
+          <section id="clothing" class="my-5 overflow-hidden">
+            <div class="container pb-5">
+        
+              <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+                <h2 class="display-3 fw-normal">Best selling products</h2>
+                <div>
+                  <a href="#" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                    shop now
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                      <use xlink:href="#arrow-right"></use>
+                    </svg></a>
+                </div>
+              </div>
+    
+              <div class="album py-5 bg-body-tertiary">
+                <div class="container">
+            
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                        <img src="{% static 'img/item5.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-body-secondary">9 mins</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                        <img src="{% static 'img/item6.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-body-secondary">9 mins</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                        <img src="{% static 'img/item9.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-body-secondary">9 mins</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> {% endcomment %}
+                        <div class="card-body">
+                          <img src="{% static 'img/item15.jpg' %}" class="card-img-top" alt="...">
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-body-secondary">9 mins</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </section>
+
+
+
+          <section id="register" style="background: url('images/background-img.png') no-repeat;">
+            <div class="container ">
+              <div class="row my-5 py-5">
+                <div class="offset-md-3 col-md-6 my-5 ">
+                  <h2 class="display-3 fw-normal text-center">Get 20% Off on <span class="text-primary">first Purchase</span>
+                  </h2>
+                  <form>
+                    <div class="mb-3">
+                      <input type="email" class="form-control form-control-lg" name="email" id="email"
+                        placeholder="Enter Your Email Address">
+                    </div>
+                    <div class="mb-3">
+                      <input type="password" class="form-control form-control-lg" name="email" id="password1"
+                        placeholder="Create Password">
+                    </div>
+                    <div class="mb-3">
+                      <input type="password" class="form-control form-control-lg" name="email" id="password2"
+                        placeholder="Repeat Password">
+                    </div>
+        
+                    <div class="d-grid gap-2">
+                      <button type="submit" class="btn btn-dark btn-lg rounded-1">Register it now</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section id="service">
+            <div class="container py-5 my-5">
+              <div class="row g-md-5 pt-4">
+                <div class="col-md-3 my-3">
+                  <div class="card">
+                    <div>
+                      <iconify-icon class="service-icon text-primary" icon="la:shopping-cart"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">Free Delivery</h3>
+                    <div class="card-text">
+                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 my-3">
+                  <div class="card">
+                    <div>
+                      <iconify-icon class="service-icon text-primary" icon="la:user-check"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">100% secure payment</h3>
+                    <div class="card-text">
+                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 my-3">
+                  <div class="card">
+                    <div>
+                      <iconify-icon class="service-icon text-primary" icon="la:tag"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">Daily Offer</h3>
+                    <div class="card-text">
+                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 my-3">
+                  <div class="card">
+                    <div>
+                      <iconify-icon class="service-icon text-primary" icon="la:award"></iconify-icon>
+                    </div>
+                    <h3 class="card-title py-2 m-0">Quality guarantee</h3>
+                    <div class="card-text">
+                      <p class="blog-paragraph fs-6">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+          </section>
+        
+
+
+   
+
+
+</main>
+
+
+
+
+ 
+
+{% endblock %}
