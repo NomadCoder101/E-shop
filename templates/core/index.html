@@ -140,7 +140,7 @@
                   <h3 class="p-3">{{product.title|title}}</h3>
                   <p class="price">${{product.price}}</p>
                   <p>{{product.description}}</p>
-                  <p><button>Add to Cart</button></p>
+                  <p><a href="{{ product.get_absolute_url }}"><button>Learn More</button></a></p>
                 </div> 
               </div>
              {% endfor %}
@@ -218,14 +218,14 @@
                   {% for product in products %}
           
                   <div class="card pt-2 ">
-                   <a href=""><div> <img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
+                   <a href="{{ product.get_absolute_url }}"><div> <img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
           
                     </div>
                     <div>
                     <h3 class="p-3">{{product.title|title}}</h3>
                     <p class="price">${{product.price}}</p>
                     <p>{{product.description}}</p>
-                    <p><button>Add to Cart</button></p>
+                    <p><a href="{{ product.get_absolute_url }}"><button>Learn More</button></a></p>
                   </div> 
                 </div>
                {% endfor %}
@@ -280,14 +280,14 @@
                     {% for product in products %}
             
                     <div class="card pt-2 ">
-                     <div> </a href=""><img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
+                     <div> <a href="{{ product.get_absolute_url }}"><img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
             
                       </div>
                       <div>
                       <h3 class="p-3">{{product.title|title}}</h3>
                       <p class="price">${{product.price}}</p>
                       <p>{{product.description}}</p>
-                      <p><button>Add to Cart</button></p>
+                      <p><a href="{{ product.get_absolute_url }}"><button>Learn More</button></a></p>
                     </div> 
                   </div>
                  {% endfor %}

@@ -59,14 +59,16 @@ Store
         {% for product in products %}
 
         <div class="card p-2 m-3 mx-auto">
-         <div> <a href="" ><img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
+         <div> <a href="{{ product.get_absolute_url }}" ><img src="{{product.image.url}}" alt="Nike" style="width:100%"></a>
 
           </div>
           <div>
           <h1 class="p-3">{{product.title|title}}</h1>
           <p class="price">${{product.price}}</p>
           <p>{{product.description}}</p>
-          <p><button>Add to Cart</button></p>
+         
+          <p><a href="{{ product.get_absolute_url }}"><button>Learn More</button></a></p>
+          
         </div> 
       </div>
      {% endfor %}
@@ -76,7 +78,29 @@ Store
 </main>
 
 
+<script>
 
+
+  $(document).on('click', '#add-button', function (e) {
+    e.preventDefault();
+    //console.log($('#select option:selected').text())
+    $.ajax({
+        type: 'POST',
+        url: '{% url "basket:basket_add" %}',
+        data: {
+            productid: $('#add-button').val(),
+            productqty: $('#select option:selected').text(),
+            csrfmiddlewaretoken: "{{csrf_token}}",
+            action: 'post'
+        },
+        success: function (json) {
+          document.getElementById("basket-qty").innerHTML = json.qty
+          console.log(json)
+        },
+        error: function (xhr, errmsg, err) {}
+    });
+})
+</script> 
 
 {% endblock content %}
 

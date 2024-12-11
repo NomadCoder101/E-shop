@@ -21,11 +21,15 @@ from django.urls import include, path
 
 from . import views
 
+from store import urls
+from basket import urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
-    path('store/',include('store.urls',namespace='store'))
+    path('store/',include('store.urls',namespace='store')),
+    path('basket/', include('basket.urls', namespace='basket')),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

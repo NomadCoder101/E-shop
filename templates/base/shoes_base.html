@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,20 +112,20 @@
                             </ul>
                         </li>
                     </ul>
-                    <a type="button" role="button" href=""
+                    <a type="button" role="button" href="{% url "basket:basket_summary" %}"
                         class="btn btn-outline-secondary">
                         
 
-                        {% comment %} {% with totalqty=basket|length %} {% endcomment %}
-                        <div id="basket-qty" class="d-inline-flex">0
-                        {% comment %} {% if totalqty > 0 %}
+                         {% with totalqty=basket|length %} 
+                        <div id="basket-qty" class="d-inline-flex">
+                        {% if totalqty > 0 %}
                         {{totalqty}}
                         
                         {% else %}
                             0
-                        {% endif %} {% endcomment %}
+                        {% endif %} 
                     </div>
-                        {% comment %} {% endwith %} {% endcomment %}
+                      {% endwith %} 
                            
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

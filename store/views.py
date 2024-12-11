@@ -22,7 +22,7 @@ def products_all(request):
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug, in_stock=True)
     print(product)
-    return render(request, 'store/products/single.html', {'product': product})
+    return render(request, 'store/products/sin.html', {'product': product})
 
 
 def category_list(request, category_slug):

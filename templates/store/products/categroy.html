@@ -67,7 +67,7 @@
            <h1 class="p-3">{{product.title|title}}</h1>
            <p class="price">${{product.price}}</p>
            <p>{{product.description}}</p>
-           <p><button>Add to Cart</button></p>
+           <p><a href="{{ product.get_absolute_url }}"><button>Learn More</button></a></p>
          </div> 
        </div>
        
